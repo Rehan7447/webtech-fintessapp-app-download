@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>masiso.ai</title>
+    <!--<link rel="shortcut icon" type="image/jpg" href="masiso_ai.ico"/>-->
+    <meta name="description" content="Analyze your workouts" />
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="fixPhoneSkin();">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+      * {
+        margin: 0;
+      }
+
+      html {
+        height: 100%;
+        background-color: #ddeeff;
+      }
+
+      body {
+        display: block;
+        height: auto;
+        font-family: "Poppins", sans-serif;
+        background-color: white;
+      }
+
+      .header {
+        display: block;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        padding-bottom: 25px;
+      }
+
+      .logo {
+        width: 250px;
+        height: 50px;
+        padding-top: 30px;
+        padding-left: 45px;
+      }
+
+      .body {
+        display: block;
+        min-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .content {
+        display: block;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 34px;
+        width: calc(100% - 68px);
+      }
+
+      .text {
+        position: relative;
+        display: inline-block;
+        margin-left: 20px;
+        width: 60%;
+      }
+
+      .pic {
+        display: block;
+        float: right;
+        width: 30%;
+        background-image: url('app_gif.gif');
+        background-position: center;
+        background-size: 89% 95%;
+        background-repeat: no-repeat;
+      }
+
+      @media(max-width:900px){
+        .pic{
+          background-position:center 3.5rem;
+          background-size: 45% 90%;
+        }
+      }
+      @media(max-width:770px){
+        .pic{
+          background-position:center 3.3rem;
+          background-size: 45% 90%;
+        }
+      }
+      @media(max-width:600px){
+        .pic{
+          background-position:center 3.3rem;
+          background-size: 45% 87%;
+        }
+      }
+      @media(max-width:500px){
+        .pic{
+          background-position:center 3rem;
+          background-size: 45% 87%;
+        }
+      }
+      @media(max-width:430px){
+        .pic{
+          background-position:center 3rem;
+          background-size: 45% 84%;
+        }
+      }
+      @media(max-width:360px){
+        .pic{
+          background-position:center 3rem;
+          background-size: 45% 82%;
+        }
+      }
+
+      .pitch {
+        font-size: 44px;
+        padding-top: 98px;
+        font-family: Helvetica, sans-serif;
+        font-weight: 500;
+      }
+
+      .description {
+        font-size: 22px;
+        padding-left: 0px;
+      }
+
+      .description.centered {
+        text-align: center;
+      }
+
+      .coming-soon {
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      .footer {
+        display: block;
+        bottom: 0px;
+        background-color: #ddeeff;
+        width: 100%;
+      }
+
+      .footer-content {
+        padding: 25px 3px;
+        color: black;
+        text-align: center;
+        line-height: 28px;
+      }
+
+      @media only screen and (max-width: 900px) {
+        .text {
+          text-align: center;
+        }
+        .pic {
+          width: 50%;
+          padding-top: 42px;
+          padding-left: 25%;
+          padding-right: 25%;
+          height: auto;
+        }
+        .text {
+          width: calc(100% - 45px);
+        }
+      }
+
+      .ios_store_btn:hover {
+        cursor: pointer;
+      }
+
+      @media only screen and (min-width: 900px) {
+        .header {
+          padding-bottom: 55px;
+        }
+        .footer-content {
+          padding: 30px 25px;
+        }
+      }
+
+      @media only screen and (min-width: 900px) {
+        @media only screen and (max-height: 560px) {
+          .footer {
+            margin-top: 55px;
+          }
+        }
+
+        @media only screen and (min-height: 560px) {
+          .footer {
+            margin-top: 4%;
+          }
+        }
+      }
+
+      @media only screen and (min-width: 970px) {
+        .content {
+          padding-left: 50px;
+          padding-right: 50px;
+          width: calc(100% - 300px);
+        }
+      }
+
+      @media only screen and (min-width: 1200px) {
+        .content {
+          padding-left: 88px;
+          padding-right: 88px;
+          width: calc(100% - 500px);
+        }
+        .header {
+          padding-bottom: 73px;
+        }
+      }
+
+      @media only screen and (min-width: 1400px) {
+        .content {
+          width: 1000px;
+        }
+      }
+    </style>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="masiso_ai (2).svg" />
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+      <div class="content">
+        <div class="text">
+          <div class="pitch">
+            <div>Analyze your</div>
+            <div>squats.</div>
+          </div>
+
+          <br />
+
+          <!-- Description Text -->
+          <div class="description">
+            Get feedback on form, know when to add weight, and more
+          </div>
+        </div>
+
+        <!-- App Screenshot -->
+        <div class="pic">
+          <img id="app-gif" style="width: 100%;" src="phone_skin.png" />
+          <!-- <img
+            id="phone-skin"
+            style="position: absolute; top: 0px; left: 0px;max-width:221px;min-height:478px;"
+            src="phone_skin.png"
+          /> -->
+        </div>
+
+        <div class="text ios_store_btn">
+          <a
+            href="https://apps.apple.com/us/app/masisoai-analyze-your-squats/id1590255838"
+          >
+            <img
+              style="width: 185px; margin-top: 35px"
+              src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- <script>
+        function fixPhoneSkin() {
+          let img1 = document.getElementById("app-gif");
+          let img2 = document.getElementById("phone-skin");
+          img2.style.height = (img1.clientHeight + 28).toString() + "px";
+          img2.style.top =
+            (img1.getBoundingClientRect().top - 14).toString() + "px";
+          img2.style.left =
+            (img1.getBoundingClientRect().left - 15).toString() + "px";
+        }
+        window.addEventListener(
+          "resize",
+          function (event) {
+            fixPhoneSkin();
+          },
+          true
+        );
+      </script> -->
+
+      <br />
+      <br />
+      <br />
+      <div class="content">
+        <div class="description centered">
+          <div>Automatic form analysis, rep counting, and</div>
+          <div>much more - enabled using ai for free</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="description centered" style="font-size: 18px">
+          Coming soon to the Google Play Store!
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-content">
+        <span style="font-size: 22px">Reach out to us!</span>
+        <br />
+        <span
+          ><a
+            style="text-decoration: none; font-size: 20px"
+            href="mailto: contact@masiso.ai"
+            >contact@masiso.ai</a
+          ></span
+        >
+        <br />
+        <span>For business inquiries, press, and everything else,</span>
+        <span>reach out as well!</span>
+        <br />
+        <a href="/terms">Terms of Use • Privacy Policy</a>
+      </div>
+    </div>
+  </body>
+</html>
